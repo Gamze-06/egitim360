@@ -1,0 +1,151 @@
+/* ============================= */
+/* THEME VARIABLES               */
+/* ============================= */
+
+:root {
+  /* BACKGROUND */
+  --bg: #f8fafc;
+  --surface: #ffffff;
+
+  /* TEXT */
+  --text: #111827;
+  --muted: #c8d6f2;
+
+  /* UI */
+  --border: #e5e7eb;
+
+  /* BRAND */
+  --primary: #4f46e5;
+  --primary-soft: #eef2ff;
+  --success: #22c55e;
+
+  /* SHADOW */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* ============================= */
+/* DARK MODE                     */
+/* ============================= */
+
+[data-theme="dark"] {
+  /* BACKGROUND */
+  --bg: #020617;
+  --surface: #0f172a;
+
+  /* TEXT */
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+
+  /* UI */
+  --border: #1e293b;
+
+  /* BRAND */
+  --primary: #818cf8;
+  --primary-soft: #1e1b4b;
+  --success: #22c55e;
+
+  /* SHADOW */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md: 0 16px 40px rgba(0,0,0,0.45);
+}
+
+/* ============================= */
+/* GLOBAL RESET                  */
+/* ============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================= */
+/* BODY                          */
+/* ============================= */
+
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(
+    180deg,
+    var(--bg),
+    var(--bg)
+  );
+  color: var(--text);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* ============================= */
+/* TYPOGRAPHY                    */
+/* ============================= */
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text);
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* LINKS                         */
+/* ============================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================= */
+/* BUTTONS                       */
+/* ============================= */
+
+button {
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* ============================= */
+/* CARDS (GENERIC)               */
+/* ============================= */
+
+.card {
+  background: var(--surface);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================= */
+/* SCROLLBAR (DESKTOP)           */
+/* ============================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
